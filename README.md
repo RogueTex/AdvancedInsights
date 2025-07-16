@@ -1,59 +1,45 @@
 # Live Insight Scraper
 
-A full-stack app to fetch, summarize, and present live web insights using FastAPI (backend) and React (frontend).
-
-## Features
-- Query the web for live information
-- Summarize results using HuggingFace transformers
-- Modern React UI
-- Free hosting: Backend on Render, Frontend on GitHub Pages
+Live Insight Scraper is a modern web application that empowers users to instantly fetch, summarize, and read live insights from across the web. Designed for speed, clarity, and accessibility, it combines the power of real-time web search with advanced AI summarization to deliver concise, readable content on any topic you care about.
 
 ---
 
-## Backend (FastAPI)
-
-### Local Setup
-```bash
-pip install -r requirements.txt
-uvicorn main:app --reload
-```
-
-### Deploy to Render
-- Push your code to GitHub
-- Create a new Web Service on [Render](https://render.com/)
-- Use the following settings:
-  - Build Command: `pip install -r requirements.txt`
-  - Start Command: `uvicorn main:app --host 0.0.0.0 --port $PORT`
-- Or use the provided `render.yaml`
+## What Does It Do?
+- **Instant Web Insights:** Enter any query and get up-to-date information scraped from the web.
+- **AI-Powered Summaries:** Long, complex search results are distilled into clear, readable summaries using state-of-the-art AI models.
+- **Seamless Experience:** A clean, intuitive interface lets you focus on the information you need, not the noise.
+- **Free & Open Source:** Built with open technologies and hosted on free platforms, so anyone can use or extend it.
 
 ---
 
-## Frontend (React)
-
-### Local Setup
-```bash
-cd frontend
-npm install
-npm run dev
-```
-
-### Deploy to GitHub Pages
-1. Set the correct `homepage` in `package.json` (already set for `rogueTex`)
-2. Add your Render backend URL to `frontend/.env` as `VITE_API_URL`
-3. Build and deploy:
-   ```bash
-   npm run deploy
-   ```
-4. Enable GitHub Pages in your repo settings (branch: `gh-pages`)
+## Key Features
+- **Live Search:** Connects to the web in real time to fetch the latest information for your queries.
+- **Automatic Summarization:** Uses HuggingFace transformers to generate concise summaries from raw search results.
+- **Modern UI:** Built with React for a fast, responsive, and user-friendly experience.
+- **Accessible Anywhere:** Frontend is hosted on GitHub Pages, backend on Render—no installation required.
+- **Open Source:** Fork, modify, or contribute on GitHub!
 
 ---
 
-## Connecting Frontend to Backend
-- The React app uses the `VITE_API_URL` environment variable to call the backend.
-- When running locally, you can use `http://localhost:8000`.
-- When deployed, it will use your Render backend URL.
+## Use Cases
+- Quickly research a topic and get the gist without sifting through multiple articles.
+- Stay updated on current events, trends, or technical topics.
+- Summarize complex or lengthy web content into digestible insights.
+- Great for students, journalists, analysts, and the curious-minded.
+
+---
+
+## Technology Stack
+- **Frontend:** React, Vite, GitHub Pages
+- **Backend:** FastAPI, HuggingFace Transformers, Render
+- **Web Scraping:** httpx, BeautifulSoup
 
 ---
 
 ## License
-MIT 
+MIT — Free to use, share, and improve.
+
+---
+
+## Get Involved
+We welcome contributions, feedback, and ideas! Check out the code or open an issue to get started. 
