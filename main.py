@@ -12,4 +12,4 @@ class QueryRequest(BaseModel):
 def search_and_summarize(request: QueryRequest):
     results = fetch_results(request.query)
     summary = summarize_content(results)
-    return {"summary": summary} 
+    return {"summary": summary}
